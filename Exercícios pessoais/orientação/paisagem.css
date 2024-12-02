@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: rgb(0, 0, 0) url('imagens/Imagem\ do\ WhatsApp\ de\ 2024-09-24\ à\(s\)\ 10.44.49_aa1eb43c.jpg') center right no-repeat;
+    background-size: contain;
+    background-attachment: fixed;   
+}

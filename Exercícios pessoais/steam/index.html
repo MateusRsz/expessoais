@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicial</title>
+    <link rel="shortcut icon" href="imagens/steam.icon" type="image/x-icon">
+    <link rel="stylesheet" href="mobile.css" media="screen">
+</head>
+
+<body>
+    <header>
+        <img src="https://store.fastly.steamstatic.com/public/shared/images/responsive/header_menu_hamburger.png"
+            id="header_menu_hamburger" onclick="menu()" alt="Menu">
+
+
+        <img src="https://store.fastly.steamstatic.com/public/shared/images/responsive/header_logo.png" id="header_logo"
+            alt="SteamLogo" onclick="reload()">
+
+    </header>
+    <div id="menu">
+        <ul id="lista_menu">
+            <li class="lista_padrao"><a href="#">Iniciar sessão</a>
+
+            <li class="sub_menu" id="li_loja"><a href="#" onclick="loja_menu()">Loja</a>
+                <section id="sub_menu_loja">
+                    <ul>
+                        <li><a href="#">Início</a>
+                        <li><a href="#">Lista de descobrimento</a>
+                        <li><a href="#">Lista de desejos</a>
+                        <li><a href="#">Loja de pontos</a>
+                        <li><a href="#">Notícias</a>
+                        <li><a href="#">Estatísticas</a>
+                    </ul>
+                </section>
+
+            <li class="sub_menu" id="li_comunidade"><a href="#" onclick="comunidade_menu()">Comunidade</a>
+                <section id="sub_menu_comunidade">
+                    <ul>
+                        <li><a href="#">Página inicial</a>
+                        <li><a href="#">Discussões</a>
+                        <li><a href="#">Oficina</a>
+                        <li><a href="#">Mercado</a>
+                        <li><a href="#">Transmissões</a>
+                    </ul>
+                </section>
+
+
+            <li class="lista_padrao"><a href="#">Sobre</a>
+            <li class="lista_padrao"><a href="#">Suporte</a>
+
+        </ul>
+    </div>
+
+    <div id="offmenu" onclick="offmenu()"> </div>
+    <!--div para desativar display do menu-->
+
+
+
+    <script>
+
+        var sub_menu_loja = document.querySelector('section#sub_menu_loja')
+        //sub menu da loja
+        var li_loja = document.querySelector("#li_loja")
+        //li da loja
+
+        var sub_menu_comunidade = document.querySelector('section#sub_menu_comunidade')
+        //sub menu da comunidade
+        var li_comunidade = document.querySelector("#li_comunidade")//li da comunidade
+
+
+
+        function menu() {
+            var menuh = document.querySelector('div#menu')
+            var offmenu = document.querySelector('div#offmenu')
+
+            if (menuh.style.display == "block") {
+                menuh.style.display = "none"
+            } else {
+                menuh.style.display = "block"
+            }
+            offmenu.style.display = 'inline'
+        }
+        function offmenu() {
+            var menuh = document.querySelector('div#menu')
+            var offmenu = document.querySelector('div#offmenu')
+            if (menuh.style.display == "block") {
+                menuh.style.display = "none"
+                offmenu.style.display = "none"
+            }
+        }
+
+        function reload() {
+            window.location.reload()
+        }
+
+
+        function loja_menu() {
+            if (sub_menu_loja.style.display == "block") {
+                sub_menu_loja.style.display = "none"
+                li_loja.style.backgroundColor = "#171A21"
+
+            } else {
+                sub_menu_loja.style.display = "block"
+                sub_menu_comunidade.style.display = "none"
+                li_loja.style.backgroundColor = "#192533"
+                li_comunidade.style.backgroundColor = "#171A21"
+            }
+
+        }
+
+        function comunidade_menu() {
+            if (sub_menu_comunidade.style.display == "block") {
+                sub_menu_comunidade.style.display = "none"
+                li_comunidade.style.backgroundColor = "#171A21"
+
+            } else {
+                sub_menu_comunidade.style.display = "block"
+                sub_menu_loja.style.display = "none"
+                li_comunidade.style.backgroundColor = "#192533"
+                li_loja.style.backgroundColor = "#171A21"
+            }
+        }
+    </script>
+</body>
+
+</html>

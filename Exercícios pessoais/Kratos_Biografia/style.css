@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+@font-face {
+        font-family: 'godofwar';
+        src: url('fontes/GODOFWAR.TTF') format('truetype');
+        font-size: normal;
+        font-weight: normal;
+        font-style: normal;
+    }
+
+body{
+    font-family: 'godofwar';
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, #9e8556 ,#ceaf75, #f0cc8a);
+}
+h1{
+    text-align: center;
+}
+
+img{
+
+    border-radius: 15px;
+    box-shadow: 5px 5px 6px #746240b7;    
+    width: 450px;
+    height: 340px;
+
+ 
+
+}
+.inicio div{
+    text-align: justify;
+    width: 600px;
+    text-shadow: 2px 2px 5px #695a3ca9 ;
+}    
+
+.inicio{
+     display:  flex;
+     justify-content: flex-start;
+}
+
+.texto2 img{
+    width: 700px;
+}
+ 
