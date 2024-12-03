@@ -56,10 +56,11 @@ div#menu {
 
 div#offmenu {
     position: absolute;
-    right: 0px;
+    right: -66%;
+    top: 0px;
     background-color: transparent;
     width: 40vw;
-    height: 93.5vh;
+    height: 100vh;
     display: none;
 
 }
@@ -73,6 +74,7 @@ div#offmenu {
 
 
 }
+ 
 
 ul#lista_menu>li>a {
     color: #bdbdbd;
@@ -102,4 +104,98 @@ li.sub_menu {
     border-right: none;
     border-left: none;
      
+}
+
+#pos_menu > li{
+    color: #8a8a8a;
+    padding: 5px 0px 10px 10px;
+    font-size: 0.9em;
+}
+#pos_menu > li > a{
+    color: #8a8a8a;
+}
+
+section#idiomas {
+    width: 95vw;
+    height: 130px;
+    background-color: #2A2E34;
+    display: block;
+    border-top: 1px solid rgb(0, 174, 255);
+    position: relative;
+    display: none;
+     
+}
+#idiomas > h1{
+    color: white;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 20px 10px 10px 15px;
+}
+
+#idiomas > select{
+    width: 96%;
+    height: 24px;
+    margin: 0px 0px 5px 15px;
+    
+}
+#idiomas > button{
+     position: absolute;
+    bottom: 20px;
+    margin: 0px 17px 0px 0px;
+    
+}
+#button_left {
+    position: absolute;
+    right: 70px;
+    background: #669D1E;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.281);
+    border: none;
+    padding: 3px 5px 3px 5px;
+    color: #d4d4d4;
+    font-size: 0.9em;
+    font-weight: 400;
+    border-radius: 2px;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.178);
+}
+
+#button_left:hover{
+    background: #75b127;
+    color: white;
+}
+#button_right {
+    position: absolute;
+    right: 0px;
+    background-color: #3e444e;
+    color: #c9c8c8;
+    border: none;
+    font-size: 0.9em;
+    font-weight: 400;
+    padding: 3px 6px 3px 6px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.178);
+
+}
+
+#button_right:hover {
+    color: white;
+    background-color: #4f535a;
+}
+
+
+
+div#footer > img {
+    width: 70px;
+    height: 20px;
+}
+div#footer {
+    position: absolute;
+    bottom: 25px;
+    padding: 15px;
+        
+}
+
+div#footer > p{
+    color: rgb(167, 165, 165);
+    font-size: 0.7em;
+    text-align: justify;
 }

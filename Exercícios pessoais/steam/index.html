@@ -35,7 +35,7 @@
                     </ul>
                 </section>
 
-            <li class="sub_menu" id="li_comunidade"><a href="#" onclick="comunidade_menu()">Comunidade</a>
+            <li class="sub_menu"><a href="#" onclick="comunidade_menu()" id="li_a_comunidade">Comunidade</a>
                 <section id="sub_menu_comunidade">
                     <ul>
                         <li><a href="#">Página inicial</a>
@@ -51,78 +51,128 @@
             <li class="lista_padrao"><a href="#">Suporte</a>
 
         </ul>
-    </div>
 
-    <div id="offmenu" onclick="offmenu()"> </div>
-    <!--div para desativar display do menu-->
+        <ul id="pos_menu">
+            
+             <li onclick="idioma()"><p>Alterar idioma</p>
+<!--começo select--><section id="idiomas">
+                    <h1>Alterar idioma</h1>
+                    <select name="nameidioma" id="idioma">
+                        <optgroup>
+                            <option value="pt-br">
+                                <p>Português (Brasil)</p>
+                            </option>
+
+                        </optgroup>
+
+                    </select>
+
+                    <button id="button_left">Alterar idioma</button> 
+                    <button id="button_right">Cancelar</button>
+
+                <!--fim select--></section>
+
+
+            <li><a href="https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community&hl=pt_BR"
+                    target="_blank">Baixe o aplicativo móvel</a>
+            <li>ver versão para computadores
+        </ul>
+
+
+        <div id="footer">
+            <img src="imagens/valve.png" alt="logo_valve">
+            <p><sub>© Valve Corporation. Todos os direitos reservados. Todas as marcas registradas são propriedade dos
+                    seus respectivos donos nos EUA e em outros países. Política de Privacidade | Termos Legais | Acordo
+                    de Assinatura do Steam | Reembolsos</sub></p>
+            </footer>
+        </div>
+
+        <div id="offmenu" onclick="offmenu()"> </div>
+        <!--div para desativar display do menu-->
 
 
 
-    <script>
+        <script>
 
-        var sub_menu_loja = document.querySelector('section#sub_menu_loja')
-        //sub menu da loja
-        var li_loja = document.querySelector("#li_loja")
-        //li da loja
+            var sub_menu_loja = document.querySelector('section#sub_menu_loja')
+            //sub menu da loja
+            var li_loja = document.querySelector("#li_loja")
+            //li da loja
 
-        var sub_menu_comunidade = document.querySelector('section#sub_menu_comunidade')
-        //sub menu da comunidade
-        var li_comunidade = document.querySelector("#li_comunidade")//li da comunidade
+            var sub_menu_comunidade = document.querySelector('section#sub_menu_comunidade')
+            //sub menu da comunidade
+            var li_comunidade = document.querySelector("#li_comunidade")//li da comunidade
 
 
 
-        function menu() {
-            var menuh = document.querySelector('div#menu')
-            var offmenu = document.querySelector('div#offmenu')
+            function menu() {
+                var menuh = document.querySelector('div#menu')
+                var offmenu = document.querySelector('div#offmenu')
 
-            if (menuh.style.display == "block") {
-                menuh.style.display = "none"
-            } else {
-                menuh.style.display = "block"
+                if (menuh.style.display == "block") {
+                    menuh.style.display = "none"
+                } else {
+                    menuh.style.display = "block"
+                }
+                offmenu.style.display = 'inline'
             }
-            offmenu.style.display = 'inline'
-        }
-        function offmenu() {
-            var menuh = document.querySelector('div#menu')
-            var offmenu = document.querySelector('div#offmenu')
-            if (menuh.style.display == "block") {
-                menuh.style.display = "none"
-                offmenu.style.display = "none"
-            }
-        }
-
-        function reload() {
-            window.location.reload()
-        }
-
-
-        function loja_menu() {
-            if (sub_menu_loja.style.display == "block") {
-                sub_menu_loja.style.display = "none"
-                li_loja.style.backgroundColor = "#171A21"
-
-            } else {
-                sub_menu_loja.style.display = "block"
-                sub_menu_comunidade.style.display = "none"
-                li_loja.style.backgroundColor = "#192533"
-                li_comunidade.style.backgroundColor = "#171A21"
+            function offmenu() {
+                var menuh = document.querySelector('div#menu')
+                var offmenu = document.querySelector('div#offmenu')
+                if (menuh.style.display == "block") {
+                    menuh.style.display = "none"
+                    offmenu.style.display = "none"
+                }
             }
 
-        }
-
-        function comunidade_menu() {
-            if (sub_menu_comunidade.style.display == "block") {
-                sub_menu_comunidade.style.display = "none"
-                li_comunidade.style.backgroundColor = "#171A21"
-
-            } else {
-                sub_menu_comunidade.style.display = "block"
-                sub_menu_loja.style.display = "none"
-                li_comunidade.style.backgroundColor = "#192533"
-                li_loja.style.backgroundColor = "#171A21"
+            function reload() {
+                window.location.reload()
             }
-        }
-    </script>
+
+
+            function loja_menu() {
+                if (sub_menu_loja.style.display == "block") {
+                    sub_menu_loja.style.display = "none"
+                    li_loja.style.backgroundColor = "#171A21"
+
+                } else {
+                    sub_menu_loja.style.display = "block"
+                    sub_menu_comunidade.style.display = "none"
+                    li_loja.style.backgroundColor = "#192533"
+                    li_comunidade.style.backgroundColor = "#171A21"
+                }
+
+            }
+
+            function comunidade_menu() {
+                if (sub_menu_comunidade.style.display == "block") {
+                    sub_menu_comunidade.style.display = "none"
+                    li_comunidade.style.backgroundColor = "#171A21"
+
+                } else {
+                    sub_menu_comunidade.style.display = "block"
+                    sub_menu_loja.style.display = "none"
+                    li_comunidade.style.backgroundColor = "#192533"
+                    li_loja.style.backgroundColor = "#171A21"
+                }
+            }
+
+            function idioma() {
+                var section_idioma = document.querySelector("#idiomas")
+                var offmenu = document.querySelector('div#offmenu')
+                if (section_idioma.style.display == "block") {
+                    section_idioma.style.display = "none"
+                    offmenu.style.display = 'inline'
+
+                } else {
+                    section_idioma.style.display = "block"
+                    offmenu.style.display = 'none'
+                     
+
+                     
+                }
+            }
+        </script>
 </body>
 
 </html>
