@@ -19,6 +19,7 @@
             alt="SteamLogo" onclick="reload()">
 
     </header>
+    <section id="menu">
     <div id="menu">
         <ul id="lista_menu">
             <li class="lista_padrao"><a href="#">Iniciar sessão</a>
@@ -53,9 +54,11 @@
         </ul>
 
         <ul id="pos_menu">
-            
-             <li onclick="idioma()"><p>Alterar idioma</p>
-<!--começo select--><section id="idiomas">
+
+            <li onclick="idioma()">
+                <p>Alterar idioma</p>
+                <!--começo select-->
+                <section id="idiomas">
                     <h1>Alterar idioma</h1>
                     <select name="nameidioma" id="idioma">
                         <optgroup>
@@ -67,10 +70,11 @@
 
                     </select>
 
-                    <button id="button_left">Alterar idioma</button> 
+                    <button id="button_left">Alterar idioma</button>
                     <button id="button_right">Cancelar</button>
 
-                <!--fim select--></section>
+                    <!--fim select-->
+                </section>
 
 
             <li><a href="https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community&hl=pt_BR"
@@ -90,10 +94,22 @@
         <div id="offmenu" onclick="offmenu()"> </div>
         <!--div para desativar display do menu-->
 
+    </section>
 
+        <section id="busca">
+            <ul>
+                <li><a href="#">Sua loja</a>
+                <li><a href="#">Novidade e tendências</a>
+                <li><a href="#">Categorias</a>
+                <li><a href="#">Loja de pontos</a>
+                <li><a href="#">Notícias</a>
+                <li><a href="#">Laboratório</a>
+            </ul>
+            <input type="search" name="namesearch" id="search" placeholder="Buscar">
+        </section>
+        <video src="https://shared.fastly.steamstatic.com/store_item_assets/steam/clusters/sale_autumn2024/36a01fe4331ab0ca600ff205/webm_page_bg_brazilian.webm?t=1732820066" autoplay width="500px" ></video>
 
         <script>
-
             var sub_menu_loja = document.querySelector('section#sub_menu_loja')
             //sub menu da loja
             var li_loja = document.querySelector("#li_loja")
@@ -167,9 +183,9 @@
                 } else {
                     section_idioma.style.display = "block"
                     offmenu.style.display = 'none'
-                     
 
-                     
+
+
                 }
             }
         </script>
