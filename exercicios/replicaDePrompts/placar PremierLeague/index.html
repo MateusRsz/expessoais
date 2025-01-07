@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PremierLeague</title>
+</head>
+
+<body>
+    <div id="placar">
+
+        <span id="time1" class="time">red</span>
+        <span id="ponto_time1" class="pontos">0</span>
+        <img id="simbolo_premier" src="imagens/premierleague.png" alt="">
+        <span id="ponto_time2" class="pontos">0</span>
+        <span id="time2" class="time">blue</span>
+        <div id="tempo">
+            <p id="cronometro"></p>
+        </div>
+    </div>
+    <script>
+        let p = document.querySelector('p#cronometro')
+        let datemi = new Date()
+        let minutes = datemi.getSeconds()
+        
+        p.innerHTML = minutes
+    </script>
+</body>
+ 
+</html>

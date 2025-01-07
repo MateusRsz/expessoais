@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body, html {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 195, 255);
+}
+div#placar {
+    position: relative;
+    margin: auto;
+    width: 280px;  
+    height: 30px;
+    margin-top: 120px;
+    background-color: blueviolet;
+    border-radius: 5px 5px 0px 0px;
+}
+
+span.time{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.7em;
+}
+
+#time1{
+    position: absolute;
+    left: 3px;
+    top: 1px;
+}
+#time2 {
+    position: absolute;
+    right: 3px;
+    top: 1px;
+     
+}
+span.pontos {
+    color: white;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+span#ponto_time1 {
+    position: absolute;
+    left: 29%;
+    top: -15px;
+    
+
+}
+span#ponto_time2 {
+    position: absolute;
+    right: 38%;
+    top: -15px;
+}
+
+
+
+#simbolo_premier {
+    position: absolute;
+    left: 30%;
+    top: -14px;
+    width: 85px;
+    height: 48px;
+    
+}
+
+#tempo{
+    position: absolute;
+    background-color: #460b4d;
+    top: 30px;
+    left: 29%;
+    width: 90px;
+    height: 24px;
+    border-radius: 0px 0px 5px 5px;
+}

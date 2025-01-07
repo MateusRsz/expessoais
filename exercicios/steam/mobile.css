@@ -11,25 +11,29 @@
     font-weight: 300;
     list-style-type: none;
     text-decoration: none;
-   
+
 }
 
 
 body,
 html {
     width: 100vw;
-    height: 98vh;
+    height: 120vh;
     background-image: url('imagens/background.webp');
     position: relative;
-    overflow: hidden;
-} 
+  overflow-x: hidden;  
+}
+
+ 
 
 header {
+    position: fixed;
+    z-index: 1;
     background-color: #171A21;
     width: 96vw;
     padding: 9px;
-    
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    top: 0px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 img#header_menu_hamburger {
@@ -51,9 +55,9 @@ div#menu {
     height: 100vh;
     background-color: #171A21;
     box-shadow: 2px 3px 4px #0000007e;
-    display: none; 
-    z-index: 10;
-
+    display: none;
+    z-index: 2;
+    position: fixed;
 
 }
 
@@ -68,7 +72,7 @@ div#offmenu {
 
 }
 
- li.lista_padrao {
+li.lista_padrao {
     padding: 10px;
     border: 1px solid;
     border-top: none;
@@ -77,44 +81,48 @@ div#offmenu {
 
 
 }
- 
+
 
 ul#lista_menu>li>a {
     color: #bdbdbd;
     font-size: 1.2em;
 }
 
-#sub_menu_loja, #sub_menu_comunidade {
+#sub_menu_loja,
+#sub_menu_comunidade {
     background-color: #192533;
-      display: none; 
+    display: none;
 }
 
-#sub_menu_loja>ul>li, #sub_menu_comunidade>ul>li {
+#sub_menu_loja>ul>li,
+#sub_menu_comunidade>ul>li {
     margin-top: 14px;
     margin-left: 15px;
 }
 
-#sub_menu_loja> ul> li>a, #sub_menu_comunidade> ul> li>a {
+#sub_menu_loja>ul>li>a,
+#sub_menu_comunidade>ul>li>a {
     color: #e2e2e2;
     font-size: 0.9em;
 }
 
 
-li.sub_menu { 
+li.sub_menu {
     padding: 16px 0px 16px 10px;
     border: 1px solid;
     border-top: none;
     border-right: none;
     border-left: none;
-     
+
 }
 
-#pos_menu > li{
+#pos_menu>li {
     color: #8a8a8a;
     padding: 5px 0px 10px 10px;
     font-size: 0.9em;
 }
-#pos_menu > li > a{
+
+#pos_menu>li>a {
     color: #8a8a8a;
 }
 
@@ -126,28 +134,29 @@ section#idiomas {
     border-top: 1px solid rgb(0, 174, 255);
     position: relative;
     display: none;
-   
-     
 }
-#idiomas > h1{
+
+#idiomas>h1 {
     color: white;
     font-weight: 600;
     font-size: 1.2em;
     padding: 20px 10px 10px 15px;
 }
 
-#idiomas > select{
+#idiomas>select {
     width: 96%;
     height: 24px;
     margin: 0px 0px 5px 15px;
-    
+
 }
-#idiomas > button{
-     position: absolute;
+
+#idiomas>button {
+    position: absolute;
     bottom: 20px;
     margin: 0px 17px 0px 0px;
-    
+
 }
+
 #button_left {
     position: absolute;
     right: 70px;
@@ -162,10 +171,11 @@ section#idiomas {
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.178);
 }
 
-#button_left:hover{
+#button_left:hover {
     background: #75b127;
     color: white;
 }
+
 #button_right {
     position: absolute;
     right: 0px;
@@ -187,19 +197,20 @@ section#idiomas {
 
 
 
-div#footer > img {
+div#footer>img {
     width: 70px;
     height: 20px;
 }
+
 div#footer {
     position: absolute;
-    
+
     bottom: 25px;
     padding: 15px;
-        
+
 }
 
-div#footer > p{
+div#footer>p {
     color: rgb(167, 165, 165);
     font-size: 0.7em;
     text-align: justify;
@@ -211,22 +222,22 @@ div#footer > p{
     background-image: linear-gradient(to right, #3B608C 30%, #2C578D 50%, #142A73 80%);
     height: 27vh;
     width: 100vw;
-   
-    position: static;
-     
+    margin-top: 52px;
+
 }
 
-#busca > ul > li{
+#busca>ul>li {
     padding: 4px 0px 4px 13px;
 }
-#busca > ul > li > a{
+
+#busca>ul>li>a {
     color: white;
     font-size: 0.7em;
     font-weight: 700;
     text-shadow: 0px 3px 4px #00000054;
 }
 
-input#search{
+input#search {
     position: static;
     bottom: 2px;
     width: 96vw;
@@ -234,24 +245,126 @@ input#search{
     background-color: #5F849B;
     border-radius: 2px;
     padding: 1px 0px 1px 3px;
-    border: 1px solid #374b58;
+    border: 1px solid #475b69;
     box-shadow: inset 0px 0px 8px 0px #00000057;
     color: white;
 }
+
 input#search:hover {
-    border: white;
-    transition: 0.5ms ;
-}
-#busca >ul > li:hover{
-    background-image: linear-gradient(to right,#317CBB 50%, #244885,#152C75 90%);
-}
-::placeholder{
-    color:  #14181b;
-    font-style: italic;
+    border: 1px solid white;
+    transition: 0.5ms;
+
 }
 
-video{
-    transform: translateX(-20%);
-    position: static;
+
+#busca>ul>li:hover {
+    background-image: linear-gradient(to right, #317CBB 50%, #244885, #152C75 90%);
+}
+
+::placeholder {
+    color: #232e36;
+    font-style: italic;
+    font-family: serif;
+
+}
+
+video {
+    transform: translateX(-23%);
      
+}
+
+
+section#game_loja::-webkit-scrollbar {
+    background: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 5px;
+    background: #192533;
+}
+
+
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    height: 5px;
+    border-radius: 4px;
+    background: #4E5157;
+
+}
+
+section#game_loja {
+    position: relative;
+    height: 365px;
+    width: 98vw;
+    overflow-x: auto;
+    background-color: transparent;
+    margin: 0px 0px 0px 8px;
+
+}
+
+section#game1 {
+    display: inline-block;
+    background-image: url('imagens/ea_fc.jpg');
+    background-repeat: none;
+    background-size: cover;
+    width: 280px;
+    height: 350px;
+}
+
+section#game2 {
+    display: inline-block;
+    position: absolute;
+    background-image: url('imagens/eldenring.webp');
+    background-position: center center;
+    background-repeat: none;
+    background-size: cover;
+    width: 280px;
+    height: 350px;
+
+}
+
+#game1,
+#game2 {
+    margin: 3px 15px 0px 0px;
+    box-shadow: 0px 0px 5px #00000091;
+}
+
+#game1>p,
+#game2>p {
+    position: absolute;
+    bottom: 7.6px;
+    right: 112px;
+    background-color: #344654;
+    color: #BEEE11;
+    font-size: 0.6em;
+    padding: 3px 3px 3px 0px;
+    border-radius: 1px;
+    font-weight: 400;
+    width: 120px;
+}
+#game2>p {
+    position: absolute;
+    bottom: 0px;
+    right: 13px;
+    background-color: #344654;
+    color: #BEEE11;
+    font-size: 0.6em;
+    padding: 3px 3px 3px 0px;
+    border-radius: 1px;
+    font-weight: 400;
+    width: 120px;
+}
+#game1>p>span#preco,
+#game2>p>span#preco {
+    color: grey;
+    text-decoration: line-through;
+}
+
+#game1>p>span#desconto,
+#game2>p>span#desconto {
+    background-color: #4C6B22;
+    margin: 0px 4px 0px 0px;
+    padding: 3px;
+    font-weight: 600;
 }

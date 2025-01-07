@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>""""Jogo""""</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        body {
+            width: 97vw;
+            height: 50vh;
+            position: relative;
+            padding: 10px;
+            border-bottom: 5px solid black;
+            background-color: rgb(197, 210, 221);
+
+        }
+
+
+        #boneco {
+            position: absolute;
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            border: 4px solid black;
+            bottom: 0px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="boneco"></div>
+</body>
+<script>
+
+    const player1 = document.querySelector('div#boneco')
+
+
+      let x = 1 
+      let y = 1
+      //Valor Inicial, esta fora da if pois o valor dele tem que ser mutavel ou seja tem que poder se alterar
+
+    document.body.addEventListener('keydown', T => {
+        if (T.keyCode == 39) {  
+            x += 15
+            //x (1) mais 5 para ele ir 5% pra direita  
+
+            let moviX = `translateX(${x}%)`
+            /*
+            o valor de x vem pra aqui pois a cada keydown o x ganha mais 5% ou 
+            px ou o valor que vc quiser, e temos que colocar o valor de num translateX para a div ir mudando de posição horizontal
+            */
+
+            player1.style.transform = moviX 
+            //recebe o translateX(Valor da variavel que recebe a cada keydown)
+
+            console.log(B)
+        } else if (T.keyCode == 37) {
+            x -= 15
+            //aqui é a mesma logica so que inves de x ganhar ele vai perder o mesmo valor que ganhou 
+            let moviX = `translateX(${x}%)`
+            player1.style.transform = moviX
+            
+
+        } else if (T.keyCode == 38) {
+            y -= 15
+            let moviY = `translateY(${y}%)`
+            player1.style.transform = moviY
+           
+
+
+        } else if (T.keyCode == 40) {
+            y += 15
+            
+            let moviY = `translateY(${y}%)`
+            player1.style.transform = moviY
+        }
+        
+    })
+   
+
+
+
+
+
+</script>
+
+</html>

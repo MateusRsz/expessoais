@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora simples</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .botao {
+            margin: 5px 10px 0px 0px;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: rgba(131, 127, 127, 0.582);
+            
+        }
+        .botao:hover{
+            background-color: aliceblue;
+        }
+        h1{
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Calculadora Simples</h1>
+    <input type="number" id="n1" placeholder="Digite os numero">
+    <span></span>
+    <input type="number" id="n2" placeholder="Digite os numero">
+    <p>Resultado:</p>
+    <br>
+    <button class='botao' onclick="adicao()">+</buttton>
+        <button class='botao' onclick="multiplicacao()">*</buttton>
+            <button class='botao' onclick="subtracao()">-</buttton>
+                <button class='botao' onclick="divisaoreal()">/</buttton>
+                    <button class='botao' onclick="divisaointeira()">%</button>
+                    <br>
+
+                    <script>
+                        
+
+                        function adicao() {
+                            let n1 = document.querySelector('input#n1')
+                            let N1 = Number(n1.value)
+                            let n2 = document.querySelector('input#n2')
+                            let N2 = Number(n2.value)
+                            let simbol = document.querySelector('span')
+                            simbol.innerHTML = "+"
+                            let resultado = document.getElementsByTagName('p')[0]
+                            let re = N1 + N2
+                            resultado.innerHTML = re
+                        }
+                        function multiplicacao() {
+                            let n1 = document.querySelector('input#n1')
+                            let N1 = Number(n1.value)
+                            let n2 = document.querySelector('input#n2')
+                            let N2 = Number(n2.value)
+                            let simbol = document.querySelector('span')
+                            simbol.innerHTML = "*"
+                            let resultado = document.getElementsByTagName('p')[0]
+                            let re = N1 * N2
+                            resultado.innerHTML = re
+
+                        }
+
+                        function subtracao() {
+                            let n1 = document.querySelector('input#n1')
+                            let N1 = Number(n1.value)
+                            let n2 = document.querySelector('input#n2')
+                            let N2 = Number(n2.value)
+                            let simbol = document.querySelector('span')
+                            simbol.innerHTML = "-"
+                            let resultado = document.getElementsByTagName('p')[0]
+                            let re = N1 - N2
+                            resultado.innerHTML = re
+
+                        }
+                        function divisaoreal() {
+                            let n1 = document.querySelector('input#n1')
+                            let N1 = Number(n1.value)
+                            let n2 = document.querySelector('input#n2')
+                            let N2 = Number(n2.value)
+                            let simbol = document.querySelector('span')
+                            simbol.innerHTML = "/"
+                            let resultado = document.getElementsByTagName('p')[0]
+                            let re = N1 % N2
+                            resultado.innerHTML = re
+                        }
+
+                        function divisaointeira() {
+                            let n1 = document.querySelector('input#n1')
+                            let N1 = Number(n1.value)
+                            let n2 = document.querySelector('input#n2')
+                            let N2 = Number(n2.value)
+                            let simbol = document.querySelector('span')
+                            simbol.innerHTML = "%"
+                            let resultado = document.getElementsByTagName('p')[0]
+                            let re = N1 / N2
+                            resultado.innerHTML = re
+                        }
+                    </script>
+</body>
+
+</html>
