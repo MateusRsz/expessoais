@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paint</title>
+    <style>
+        html {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    let x = 0
+    let y = 0
+
+let desenhar = null
+    
+
+    
+              document.addEventListener('mousedown', ()=>{
+                desenhando
+            document.addEventListener('mousemove', (a)=>{
+        let div = document.createElement('div')
+        x = a.clientX
+        y = a.clientY
+        div.style.width = '4px'
+        div.style.height = '4px'
+        div.style.backgroundColor = 'red'
+        div.style.position = 'absolute'
+        div.style.top = `${y - 10}px`
+        div.style.left = `${x - 10}px`
+        document.body.appendChild(div)
+        
+        
+       
+              })})
+        
+  
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+  
+//   codigo original
+  
+  /*const player1 = document.querySelector('div#boneco')//boneco
+
+    let x = 1 //horizontal
+    let y = 1 //vertical
+
+    
+    document.body.style.position = 'relative'
+    document.body.addEventListener('keydown', T => {
+
+        if (T.keyCode == 39 || T.keyCode == 68) {//right
+            x += 3
+            player1.style.left = `${x}%`
+          
+        } else if (T.keyCode == 37 || T.keyCode == 65) {//left
+            x -= 3          
+            player1.style.left = `${x}%`
+
+        } else if (T.keyCode == 38 || T.keyCode == 87) {//top
+            y += 3
+           
+            player1.style.bottom = `${y}%`
+
+        } else if (T.keyCode == 40 || T.keyCode == 83) {//bottom
+            y -= 3
+            player1.style.bottom = `${y}%`
+           
+        }
+    })*/
